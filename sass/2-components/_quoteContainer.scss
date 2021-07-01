@@ -1,0 +1,150 @@
+@import "../1-helpers/mixins";
+
+
+.quoteWrapper {
+    pointer-events:none;
+    opacity:0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgba(232, 236, 241, 0.7);
+    transition: opacity .3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:1;
+    
+   
+    .quoteModal{
+        padding: 1em 4em;
+        border: 5px solid darkgreen;
+        background-color: $lightblack;
+        width: 50%;
+        height:70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $beige;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+        @include desktop{
+            width: 70%;
+        }
+        @include tablet {
+            width: 80%;
+            height: 60%;
+            padding: 0.5em 2em;
+        }
+        @include mobile{
+            width: 90%;
+            height:75%;
+            padding: 0.5em 1em;
+        }
+        .quote-greeting{
+            font-size: 1.5em;
+            margin-bottom: 1.5em;
+            color: $lightgreen;
+            text-transform: uppercase;
+            @include tablet{
+                font-size: 1.3em;
+            }
+            @include mobile{
+                font-size: 1.1em;
+            }
+        }
+        .vehicle-info{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            .quoteVehicle-name {
+                font-size: 1.3em;
+                letter-spacing:2px;
+                align-self:flex-start;
+            }
+            .quote-vehicleDetail{
+                margin: 1em;
+                display: flex;
+                align-items: center;
+                .quote-vehicleOption{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 1em;
+                    @include tablet{
+                        font-size: 0.8em;
+                    margin-right: 0.7em;
+
+                    }
+                    @include mobile{
+                        font-size: 0.7em;
+                    }
+                    .iconify {
+                        margin-right: 0.5em;
+
+                    }
+                }
+                    
+            }
+            img{
+                max-width: 70%;
+            }
+        }
+            .journey-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                font-size: 1.1em;
+                margin: 1.1em;
+                
+                @include tablet{
+                    font-size: 1em;
+                    margin-bottom:1.3em;
+                }
+                .quote-path{
+                    margin:0.5em;
+                    letter-spacing: 1px;
+                    
+                }
+            }
+            .vehicle-cost{
+                display: flex;
+                flex-direction: column;
+                align-self: flex-end;
+                
+                margin-bottom: 1em;
+                @include tablet{
+                    font-size: 0.9em;
+                }
+                .quote-vehicleFuelCost{
+                    margin: 0.5em;
+                   
+                }
+                .quote-totalCost {
+                    font-size: 1.3em;
+                    color: $orange;
+                    
+                    @include tablet{
+                        font-size: 1.1em;
+                    }
+                }
+            }
+            .paymentBtn {
+                @include btnStyle;
+                color: $green;
+                background-color: $lightgreen;
+                padding: 1em 3em;
+                @include tablet {
+                    font-size: 0.7em;
+                    padding: 0.6em 2em;
+                    margin-top:1em;
+                    letter-spacing: 1.3px;
+                }
+            }
+        }
+    &.visible{
+        opacity:1;
+        pointer-events: auto;
+    }
+}

@@ -1,0 +1,44 @@
+@import "../1-helpers/mixins";
+
+.transportation-container{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    transition: display 0.3s ease-in;
+    margin:2em;
+    .transportation-item {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em 2em;
+        &:hover {
+            cursor: pointer;
+        }
+        .transportation-name{
+            color: $beige;
+            text-align:center;
+            font-size: 1.3em;
+        }
+        img{
+            transition: all 0.3s ease;
+            width: 80%;
+            display:block;
+            margin: 1.2em auto;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .dayPrice{
+            color: $orange;
+            font-size: 1.1em;
+            text-align:right;
+            margin-bottom:0.5em;
+        }
+        .dayTotalPrice {
+            color: $beige;
+            font-size: 0.9em;
+            text-align:right;
+        }
+    }
+    
+}

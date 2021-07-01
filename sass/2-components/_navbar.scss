@@ -1,0 +1,36 @@
+@import "../1-helpers/breakpoints";
+
+.navbar {
+    background-color: $lightblack;
+    opacity: 0;
+
+
+    .navigations {
+        padding: 1.3em 2em 1.3em 2em;
+        display: flex;
+
+        .navigation {
+            color: $beige;
+            font-size: 1.2em;
+            opacity: 0.85;
+            transition: 0.3s ease;
+            cursor: pointer;
+            @include mobile{
+                font-size:1em;
+            }
+            &:nth-child(2) {
+                margin: 0 2em;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.showNav {
+        opacity: 1;
+
+    }
+
+}

@@ -1,0 +1,103 @@
+{
+    "transportation" : [
+        {   
+            "id":1,
+            "name": "Toyota Hiace Van",
+            "imgSrc" : "https://www.toyota.co.nz/globalassets/car-images/hiace-hsgm-si3-058-11.png",
+            "minPassenger" : 3,
+            "maxPassenger": 8,
+            "dayPrice" : 210,
+            "fuelPrice" : 17,
+            "minDay" : 2,
+            "maxDay" : 15
+
+        },
+        {   
+            "id":2,
+            "name": "Ford Tourneo",
+            "imgSrc" : "https://www.sixt.nz/fileadmin/files/global/user_upload/fleet/png/350x200/ford-tourneo-custom-5d-silber-2018.png" ,
+            "minPassenger" : 3,
+            "maxPassenger": 8,
+            "dayPrice" : 220,
+            "fuelPrice" : 17,
+            "minDay" : 2,
+            "maxDay" :  15
+
+        },
+        {   
+            "id":3,
+            "name": "Porshe 911 Carrera",
+            "imgSrc": "https://files.porsche.com/filestore/image/multimedia/none/992-c4cab-modelexplorer-04/normal/80b8d375-724d-11ea-80c9-005056bbdc38;sO;twebp/porsche-normal.webp",
+            "minPassenger" : 1,
+            "maxPassenger": 2,
+            "dayPrice" : 128,
+            "fuelPrice" : 8.9,
+            "minDay" : 1,
+            "maxDay" : 10
+
+        },
+        {   
+            "id":4,
+            "name": "Mercedes-benz Cabriolet",
+            "imgSrc": "https://www.mercedes-benz.co.nz/passengercars/mercedes-benz-cars/models/c-class/cabriolet/_jcr_content/image.MQ6.2.2x.20200918073244.png",
+            "minPassenger" : 1,
+            "maxPassenger": 2,
+            "dayPrice" : 121,
+            "fuelPrice" : 8.7,
+            "minDay" : 1,
+            "maxDay" : 10
+
+        },
+        {   
+            "id":5,
+            "name": "Mercedes-benz G-63",
+            "imgSrc" : "https://www.sixt.nz/fileadmin/files/global/user_upload/fleet/png/350x200/mb-g-klasse-5d-grau-2018.png",
+            "minPassenger" : 2,
+            "maxPassenger": 4,
+            "dayPrice" : 168,
+            "fuelPrice" : 10.7,
+            "minDay" : 3,
+            "maxDay" : 10
+
+        },
+        {   
+            "id":6,
+            "name": "Audi A4 Avant Awd",
+            "imgSrc" : "https://www.sixt.nz/fileadmin/files/global/user_upload/fleet/png/350x200/audi-a4-stationwagon-grey-2021.png",
+            "minPassenger" : 2,
+            "maxPassenger": 4,
+            "dayPrice" : 127,
+            "fuelPrice" : 9.8,
+            "minDay" : 3,
+            "maxDay" : 10
+
+        },
+        {   
+            "id":7,
+            "name": "Ducati Panigale V4",
+            "imgSrc": "https://images.ctfassets.net/x7j9qwvpvr5s/4WNZEAzGhefjGPKOv1qOLs/63a3f203303ac23706c025737e6eefc3/MY-21-Pan-V4-SP-01-Model-Blocks-630x390-v03.png",
+            "minPassenger" : 1,
+            "maxPassenger": 1,
+            "dayPrice" : 119,
+            "fuelPrice" : 3.9,
+            "minDay" : 1,
+            "maxDay" : 5 
+
+        },
+        {   "id":8,
+            "name": "Honda CBR500R",
+            "imgSrc" : "https://cdn.automote.co.nz/2/7/O21MQqgW-dm8kWk_2.png",
+            "minPassenger" : 1,
+            "maxPassenger": 1,
+            "dayPrice" : 109,
+            "fuelPrice" : 3.7,
+            "minDay" : 1,
+            "maxDay" : 5 
+
+        }
+        
+
+
+    ]
+        
+}

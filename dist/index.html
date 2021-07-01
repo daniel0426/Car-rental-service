@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Holic 🚗 </title>
+
+    <!-- LEAFLET.JS & LEAFLET ROUTING PL-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.10.2/css/all.css"
+    />
+    
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- JQUERY -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <!-- FLATPICKR -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_red.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="landing-container">
+            <div class="landing__side"></div>
+            <div class="landing__main">
+                <div class="landingInfo-container">
+                    <h1 class="landing-title">All the freedom of<br> owning a car,
+                        <br>but better. </h1>
+                    <p class="landing-description">Clean cars, Flexible bookings. Socially distant rental counters.<br>
+                        Whenever, wherever go with us.</p>
+                    <button class="startBtn">GET STARTED</button>
+                </div>
+                <div class="svg-container">
+                    <img src="./asset/big.svg" alt="bigSvg" class="bigSvg">
+                    <img src="./asset/middle.svg" alt="middleSvg" class="middleSvg">
+                    <img src="./asset/small.svg" alt="smallSvg" class="smallSvg">
+                </div>
+            </div>
+        </div>
+        <section class="main-container">
+            <nav class="navbar ">
+                <ul class="navigations">
+                    <li class="navigation homeBtn"> TravelHolic</li>
+                    <li class="navigation">Why Us</li>
+                    <li class="navigation">Contact</li>
+                </ul>
+            </nav>
+            <div class="content-wrapper">
+                <div class="form-container">
+                    <h1 class="formTitle">Travel Holic</h1>
+                    <form action="" class="form formMove" type="submit">
+                        <div class="input-container">
+                            <div class="date-container">
+                                <label for="pickup">Pick-up Date</label>
+                                <div class="inputBox">
+                                    <input type="text" class="input" name="pickup" id="pickup" placeholder="Select Date" required>
+                                    <span class="iconify" data-inline="false" data-icon="bx:bxs-calendar"></span>
+                                </div>
+                            </div>
+                            <div class="date-container">
+                                <label for="return">Return Date</label>
+                                <div class="inputBox">
+                                    <input type="text" class="input" name="return" id="return" placeholder="Select Date" required>
+                                    <span class="iconify" data-inline="false" data-icon="bx:bxs-calendar"></span>
+                                </div>
+                            </div>
+                            <div class="passenger-container">
+                                <label for="passengers">Passengers</label>
+                                <div class="inputBox">
+                                    <input type="number"  class="passengers input" id="passengers" placeholder="Passengers" min=1 required>
+                                    <span class="iconify" data-inline="false" data-icon="bx:bx-user-circle"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="showOfferBtn">SHOW OFFERS</button>
+                    </form>
+                </div>
+                <ul class="transportation-container">
+
+                </ul>
+                <div class="detail-container ">
+                
+                </div>
+                <form action="" type="submit" class="locationForm">
+                    <div class="start-container">
+                        <label for="startPoint">Starting Point</label>
+                        <select name="startPoint" id="startPoint" required >
+                            <option value="" selected disabled>-- Select a city --</option>
+                            <option value="Auckland">Auckland</option>
+                            <option value="Wellington" >Wellington</option>
+                            <option value="Tauranga">Tauranga</option>
+                            <option value="Hamilton">Hamilton</option>
+                            <option value="Rotorua">Rotorua</option>
+                            <option value="Napier">Napier</option>
+                            <option value="New Plymouth">New Plymouth</option>
+                            <option value="Katikati">Katikati</option>
+                        </select>
+                    </div>
+                    <div class="destination-container">
+                        <label for="destinationPoint">Desination</label>
+                        <select name="destinationPoint" id="destinationPoint" required>
+                            <option value="" selected disabled>-- Select a city --</option>
+                            <option value="Auckland">Auckland</option>
+                            <option value="Wellington">Wellington</option>
+                            <option value="Tauranga">Tauranga</option>
+                            <option value="Hamilton">Hamilton</option>
+                            <option value="Rotorua">Rotorua</option>
+                            <option value="Napier">Napier</option>
+                            <option value="New Plymouth">New Plymouth</option>
+                            <option value="Katikati">Katikati</option>
+                        </select>
+                    </div>
+                    <button class="submitBtn">SUBMIT</button>
+                </form>
+                <div class="map-container">
+                    <div id="mapid">
+
+                    </div>
+                    <div class="fuelInfo-container">
+                        <p class="distance"></p>
+                        <p class="fuelConsumption"></p>
+                        <p class="fuelCosts"></p>
+                        <button class="quoteBtn">MAKE QUOTE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="quoteWrapper">
+    </div>
+   
+</body>
+</html>

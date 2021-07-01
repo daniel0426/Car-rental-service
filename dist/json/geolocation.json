@@ -1,0 +1,46 @@
+{
+    "geolocation" : [
+        {
+            "cityName" : "Auckland",
+            "latitude" : -36.85066728779845, 
+            "longitude" :174.76446923706044
+        },
+        {
+            "cityName" : "Wellington",
+            "latitude" : -41.27269639559682, 
+            "longitude" :174.73178518987456
+        },
+        {
+            "cityName" : "Tauranga",
+            "latitude" : -37.68237621325775, 
+            "longitude" :176.16904738747746
+        },
+        {
+            "cityName" : "Hamilton",
+            "latitude" : -37.78475229445018, 
+            "longitude" :175.28272718100993
+        },
+        {
+            "cityName" : "Rotorua",
+            "latitude" : -38.13459331240257, 
+            "longitude" :176.2527699152645
+        },
+        {
+            "cityName" : "Napier",
+            "latitude" : -39.5023805581203, 
+            "longitude" :176.8823346345963
+        },
+        {
+            "cityName" : "New Plymouth",
+            "latitude" : -39.055466982928735, 
+            "longitude" :174.0713838833494 
+        },
+        {
+            "cityName" : "Katikati",
+            "latitude" : -37.53157831435496, 
+            "longitude" :175.92881968535025
+        }
+    ]
+
+    
+}

@@ -1,0 +1,111 @@
+@import "../1-helpers/mixins";
+
+.form-container {
+
+    h1 {
+        text-align: center;
+        font-size: 72px;
+        margin-top: 0.5em;
+        background: -webkit-linear-gradient($green, $lightgreen);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1em;
+        @include tablet{
+            font-size: 3.5em;
+        }
+        @include mobile{
+            font-size: 2.5em;
+        }
+    }
+
+    .form {
+        padding: 2em 1em;
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .input-container {
+            margin-bottom: 4em;
+            display: flex;
+            justify-content: center;
+            @include desktop {
+                flex-direction: column;
+                align-items: center;
+            }
+            .date-container:nth-child(2) {
+                margin: 0 2em 0 2em;
+                @include desktop{
+                    margin: 2em ;
+                }
+            }
+
+            .date-container,
+            .passenger-container {
+                display: flex;
+                flex-direction: column;
+                max-width: 300px;
+                min-width: 250px;
+
+                label {
+                    padding-left: 5px;
+                    margin-bottom: 1em;
+                    font-size: 1.2em;
+                    color: $green;
+                    @include mobile{
+                        font-size: 1em;
+                    }
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: 30px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .input {
+                        cursor: pointer;
+                        width: 100%;
+                        font-size: 15px;
+                        height: 40px;
+                        padding: 15px 10px 15px 40px;
+                        border-radius: 15px;
+                        border: 1px solid $lightgreen;
+                        outline: none;
+                    }
+
+                    .iconify {
+                        left: 0;
+                        position: absolute;
+                        color: $iconColor;
+                        margin-left: 10px;
+                        font-size: 17px;
+
+                        &:hover {
+                            color: green;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .showOfferBtn {
+            @include btnStyle;
+            min-width: 180px;
+            border-radius: 15px;
+            align-self: center;
+            width: 14%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                background-color: $beige;
+                color: $green;
+            }
+        }
+    }
+
+}

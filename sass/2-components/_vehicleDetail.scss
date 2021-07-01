@@ -1,0 +1,97 @@
+@import "../1-helpers/mixins";
+
+.detail-container{
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+    position:relative;
+   
+    padding: 2em ;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $darkgreen;
+    @include tablet{
+        flex-direction: column;
+    }
+    &.flow{
+        width: 100%;
+        visibility: visible;
+    }
+    .detailItem-info{
+
+        color: beige;
+        .detailItem-name{
+            margin-bottom: 1em;
+            @include tablet{
+                font-size: 1.2em;
+            }
+        }
+        .detailItem-options{
+            position:absolute;
+            
+            display:flex;
+            .detailItem-option{
+                display:flex;
+                align-items:center;
+                margin-right: 1em;
+                @include tablet{
+                    font-size:0.9em;
+                }
+                @include mobile {
+                    font-size:0.8em;
+                }
+                .iconify{
+                    margin-right: 0.5em;
+
+                }
+            }
+        }
+        .detailItem-image{
+            margin:2em;
+            max-width: 500px;
+            width: 70%;
+            @include tablet{
+                width: 80%;
+            }
+        }
+    }
+    .detailItemPrice-container{
+        min-width: 300px;
+        padding: 2em 1em;
+        align-self: flex-end;
+        
+        display:flex;
+        flex-direction: column;
+        color: $beige;
+        .detailItem-price {
+            display:flex;
+            justify-content: space-between;
+            font-size: 1.2em;
+            @include tablet{
+                font-size: 1em;
+            }
+        }
+        .tax{
+            align-self: flex-end;
+            font-size: 0.9em;
+            margin: 0.5em 0 2em 0;
+            @include tablet{
+                font-size: 0.8em;
+            }
+        }
+        .selectBtn {
+            @include btnStyle;
+            background-color: $beige;
+            color: $green;
+            font-weight: bolder;
+            @include tablet {
+                font-size: 1em;
+                padding: 1em 2em;
+            }
+        }
+    }  
+    &.change {
+    .detailItemPrice-container{
+        display:none;
+    }
+} 
+}

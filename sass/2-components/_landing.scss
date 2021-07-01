@@ -1,0 +1,118 @@
+@import "../1-helpers/mixins";
+
+.landing-container {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    min-width: 100%;
+    
+    display: flex;
+    @include tablet {
+        flex-direction: column;
+        height: 100vh;
+    }
+   
+   
+    .landing__side {
+        flex: 10%;
+        background-color: $lightgreen;
+        @include tablet {
+            flex: 0.4;
+
+        }
+        @include mobile{
+            flex: 0.3;
+        }
+    }
+
+    .landing__main {
+        min-height: 100vh;
+        color: $beige;
+        background-color: $green;
+
+
+
+        .landingInfo-container {
+            flex: 60%;
+            width: 100%;
+            padding: 10em 8em;
+            @include tablet {
+                padding: 8em 5em;
+            }
+            @include mobile {
+                padding: 5em 3em;
+            }
+            .landing-title {
+                font-size: 3em;
+                margin-bottom: 1em;
+                @include tablet{
+                    font-size: 2.3em;
+                }
+                @include mobile{
+                    font-size: 1.4em;
+                }
+            }
+
+            .landing-description {
+                font-size: 1.5em;
+                margin-bottom: 1.5em;
+                @include tablet{
+                    font-size: 1.1em;
+                }
+                @include mobile{
+                    font-size: 0.8em;
+                    margin-bottom:3em;
+                }
+            }
+
+            .startBtn {
+                @include btnStyle;
+                background-color: $lightgreen;
+                width: 20%;
+                min-width: 180px;
+                @include tablet{
+                    font-size: 0.8em;
+                    padding: 0.7em 1em;
+                }
+            }
+        }
+
+        .svg-container {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 5em;
+            padding-bottom: 2em;
+            width: 100%;
+            @include tablet{
+                padding-right: 2em;
+                margin-top: 5em;
+            }
+            img {
+                align-self: flex-end;
+                margin-left: 1.5em;
+                opacity: 0.9;
+            }
+
+            .bigSvg {
+                max-width: 12%;
+                @include tablet{
+                    min-width: 100px;
+                }
+            }
+
+            .middleSvg {
+                max-width: 10%;
+                @include tablet{
+                    min-width: 80px;
+                }
+            }
+
+            .smallSvg {
+                max-width: 8%;
+                @include tablet{
+                    min-width: 60px;
+                }
+            }
+        }
+    }
+}
+

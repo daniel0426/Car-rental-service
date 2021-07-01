@@ -1,0 +1,52 @@
+@import "../1-helpers/mixins";
+
+.locationForm {
+    visibility: hidden;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .start-container,
+    .destination-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1em;
+        @include tablet {
+            justify-content: center;
+        }
+        label {
+            font-size: 1.1em;
+            color: $beige;
+            margin-right: 2em;
+            @include tablet {
+                letter-spacing: 1px;
+            }
+        }
+
+        select {
+            border-radius: 15px;
+            border: 1px solid $lightgreen;
+            padding: 5px 10px;
+            min-width: 200px;
+            cursor: pointer;
+        }
+    }
+
+    .submitBtn {
+        @include btnStyle;
+        font-size: 15px;
+        padding: 10px 15px;
+        width: 50%;
+        min-width: 150px;
+        @include tablet{
+            margin-top: 1.4em;
+            width: 30%;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+        }
+
+    }
+}
